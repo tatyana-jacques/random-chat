@@ -1,15 +1,26 @@
+
+
 namespace test_random_chat;
 
 public class Tests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
+    Chat chat = new Chat();
+    List<string> chatList = new List<string>();
+    // [SetUp]
+    // public void Setup()
+    // {
+    // }
+    // [Test]
 
-    [Test]
-    public void Test1()
+    [TestCase(1000)]
+    public void Test1(int qtd)
     {
-        Assert.Pass();
+        for (int i = 0; i < qtd; i++)
+        {
+            chatList.Add(chat.ToTalk());
+        }
+        bool containsNonsense = chatList.Any(x => x != "Hi" && x != "Bye");
+
+        Assert.False(containsNonsense);
     }
 }
