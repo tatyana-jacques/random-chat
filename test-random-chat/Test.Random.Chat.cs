@@ -1,19 +1,12 @@
 
-
 namespace test_random_chat;
 
 public class Tests
 {
     Chat chat = new Chat();
     List<string> chatList = new List<string>();
-    // [SetUp]
-    // public void Setup()
-    // {
-    // }
-    // [Test]
-
-
-    [TestCase(100)]
+   
+[TestCase(100)]
     public void TestHiBye(int qtd)
     {
 

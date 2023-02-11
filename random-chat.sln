@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ramdom-chat", "ramdom-chat\ramdom-chat.csproj", "{9043B00A-1009-43DE-9486-8215EFA8BC22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "random-chat", "ramdom-chat\ramdom-chat.csproj", "{9043B00A-1009-43DE-9486-8215EFA8BC22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-random-chat", "test-random-chat\test-random-chat.csproj", "{21B0B92C-0025-4852-B5DE-0A6A87987F06}"
 EndProject
