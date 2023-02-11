@@ -1,17 +1,7 @@
-﻿var chat = new Chat();
+﻿using random_chat;
 
-for (int i = 0; i < 30; i++)
-{
-    chat.ToTalk();
-}
-Console.WriteLine(chat.HiBye.Count().ToString());
-
-for (int i = 0; i < chat.HiBye.Count - 1; i++)
-{
-    Console.WriteLine(chat.HiBye[i]);
-}
-
-
+var contactTester = new ContactsManager();
+contactTester.ContactsRemove("carla", "blabla");
 public class Chat
 {
 
