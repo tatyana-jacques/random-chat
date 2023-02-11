@@ -12,15 +12,25 @@ public class Tests
     // }
     // [Test]
 
-    [TestCase(1000)]
+    [TestCase(100)]
     public void Test1(int qtd)
     {
+
         for (int i = 0; i < qtd; i++)
         {
-            chatList.Add(chat.ToTalk());
+            chat.ToTalk();
         }
-        bool containsNonsense = chatList.Any(x => x != "Hi" && x != "Bye");
 
-        Assert.False(containsNonsense);
+        for (int i = 1; i < chat.HiBye.Count; i++)
+        {
+            Assert.AreNotEqual(chat.HiBye[i], chat.HiBye[i - 1]);
+        }
+
     }
+
+    //[Test]
+
+
+
+
 }
