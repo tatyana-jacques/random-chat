@@ -12,8 +12,9 @@ public class Tests
     // }
     // [Test]
 
+
     [TestCase(100)]
-    public void Test1(int qtd)
+    public void TestHiBye(int qtd)
     {
 
         for (int i = 0; i < qtd; i++)
@@ -27,8 +28,22 @@ public class Tests
         }
 
     }
+    [TestCase(100)]
+    public void TestConversation(int qtd)
+    {
 
-    //[Test]
+        for (int i = 0; i < qtd; i++)
+        {
+            chat.RandomicTalk();
+        }
+
+        for (int i = 1; i < chat.Conversation.Count; i++)
+        {
+            Assert.AreNotEqual(chat.Conversation[i], chat.Conversation[i - 1]);
+        }
+
+    }
+
 
 
 

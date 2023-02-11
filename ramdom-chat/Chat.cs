@@ -41,8 +41,6 @@ public class Chat
     }
 
 
-
-
     public void RandomicTalk()
     {
         Dictionary<int, string> randomicText =
