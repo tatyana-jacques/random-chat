@@ -7,6 +7,22 @@ public class Tests
     Chat chat = new Chat();
     ContactsManager contacts = new ContactsManager();
 
+    List<Contact> contactListTester = new List<Contact>{
+        new Contact {
+            Name = "contact01",
+            Email = "email01"
+        },
+        new Contact {
+            Name = "contact02",
+            Email = "email02"
+        },
+        new Contact {
+            Name = "contact03",
+            Email = "email03"
+        },
+
+    };
+
     List<string> chatList = new List<string>();
 
     [TestCase(100)]
@@ -59,8 +75,33 @@ public class Tests
 
     }
 
+    [TestCase("contact01", "email01")]
+    public void TestContactRemoveDelete(string name, string email)
+    {
+
+        contacts.Contacts = contactListTester;
+        contacts.ContactsRemove(name, email);
+        bool verifyDelete = contacts.Contacts.Any(n => n.Name == name && n.Email == email);
+
+        Assert.False(verifyDelete);
+
+    }
+
+    [Test]
+    public void TestContactsGet()
+    {
+        Assert.AreEqual(contacts.Contacts, contacts.ContactsGet());
+    }
 
 
+    [TestCase("contact02", "email02")]
+    public void TestContactsGetOne(string name, string email)
+    {
+        contacts.Contacts = contactListTester;
+        Contact contact = contacts.ContactsGetOne(name, email);
+        Assert.AreEqual(name, contact.Name);
+        Assert.AreEqual(email, contact.Email);
 
+    }
 
 }
