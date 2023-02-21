@@ -1,2 +1,2 @@
 <h2>Random-chat</h2>
-<p>Exercício de criação de testes unitários desenvolvido durante o curso DevInHouse do Senai (2022/2023).</p>
+<p>TDD exercise developed during Senai's course DEVinHouse (2022/2023).</p>
